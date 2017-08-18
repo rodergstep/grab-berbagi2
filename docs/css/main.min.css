@@ -181,13 +181,12 @@ html {
 
 .leaderboard {
   background-color: #00953a;
-  -webkit-border-radius: 27px 27px 35px 35px;
-          border-radius: 27px 27px 35px 35px;
+  -webkit-border-radius: 26px;
+          border-radius: 26px;
   position: absolute;
   right: 2.4%;
   top: 52px;
-  width: 257px;
-  overflow: hidden; }
+  width: 257px; }
 
 .leaderboard img {
   height: auto;
@@ -226,16 +225,22 @@ html {
   top: 13px;
   margin-left: 16px; }
 
-.board-outer.second,
-.board-outer.third {
-  padding-top: 10px; }
-
 .board-outer {
   border-top: 1px solid;
   line-height: 0; }
 
 .leaderboard > .board-outer:first-child {
-  border-top: medium none; }
+  border-top: medium none;
+  position: relative; }
+  .leaderboard > .board-outer:first-child:before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -5%;
+    margin: 0 auto;
+    width: 120%;
+    height: 50px;
+    background: url("../img/board/rogy.svg") no-repeat; }
 
 .board-inner {
   display: inline-block;
@@ -249,8 +254,9 @@ html {
   padding: 31px 20px; }
 
 .board-outer .board-inner .logo {
-  width: 37px;
-  height: 37px;
+  width: 27px;
+  height: 27px;
+  margin-left: 5px;
   float: left; }
 
 .board-outer.active .board-inner .logo {
